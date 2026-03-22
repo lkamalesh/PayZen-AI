@@ -1,10 +1,10 @@
-# PaymentAI
+﻿# PayZen - Payment System with AI Risk Assistance
 
 `PayZen` is a `.NET 8` payment risk intelligence API built with a clean layered architecture:
 
-- `PaymentAI.API` � ASP.NET Core Web API (controllers, middleware, startup)
-- `PaymentAI.Core` � domain entities, DTOs, enums, interfaces
-- `PaymentAI.Infrastructure` � EF Core data access, repositories, services, identity seeding, AI integration
+- `PaymentAI.API` – ASP.NET Core Web API (controllers, middleware, startup)
+- `PaymentAI.Core` – domain entities, DTOs, enums, interfaces
+- `PaymentAI.Infrastructure` – EF Core data access, repositories, services, identity seeding, AI integration
 
 It supports merchant onboarding, payment processing with idempotency, configurable risk rules, analyst workflows, audit logging, and AI-based risk explanations via Azure AI Foundry.
 
@@ -35,9 +35,9 @@ It supports merchant onboarding, payment processing with idempotency, configurab
 - JWT Bearer Authentication
 - AutoMapper
 - Serilog (file logging)
-- Azure OpenAI
-- Azure AI Search
+- Azure OpenAI & Azure AI Search
 - Azure AI Projects / Foundry agent integration
+- Azure App Service deployment (with Managed Identity for Azure resource access)
 
 ---
 
@@ -56,23 +56,23 @@ This project includes a Retrieval-Augmented Generation (RAG) workflow for risk e
 
 ```text
 PaymentAI.sln
-?? PaymentAI.API/
-?  ?? Controllers/
-?  ?? Middlewares/
-?  ?? Properties/
-?  ?? Program.cs
-?  ?? appsettings*.json
-?? PaymentAI.Core/
-?  ?? DTOs/
-?  ?? Entities/
-?  ?? Enums/
-?  ?? Interfaces/
-?? PaymentAI.Infrastructure/
-   ?? Configuration/
-   ?? Data/
-   ?? Mappings/
-   ?? Repositories/
-   ?? Services/
+├─ PaymentAI.API/
+│  ├─ Controllers/
+│  ├─ Middlewares/
+│  ├─ Properties/
+│  ├─ Program.cs
+│  └─ appsettings*.json
+├─ PaymentAI.Core/
+│  ├─ DTOs/
+│  ├─ Entities/
+│  ├─ Enums/
+│  └─ Interfaces/
+└─ PaymentAI.Infrastructure/
+   ├─ Configuration/
+   ├─ Data/
+   ├─ Mappings/
+   ├─ Repositories/
+   └─ Services/
 ```
 
 ---
@@ -123,6 +123,12 @@ Set values in `PaymentAI.API/appsettings.Development.json` (or App Service setti
 
 ## Running Locally
 
+## Hosted Frontend
+
+- `https://payzen-ai.vercel.app`
+
+---
+
 ## Git Download / Clone
 
 Clone the repository using Git:
@@ -132,7 +138,7 @@ git clone https://github.com/lkamalesh/PayZen-AI.git
 cd PaymentAI
 ```
 
-Or use GitHub UI: click `Code` ? `Download ZIP`, then extract and open the solution.
+Or use GitHub UI: click `Code` → `Download ZIP`, then extract and open the solution.
 
 ---
 
