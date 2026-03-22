@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="PaymentAI.API/PaymentAI.API.csproj" />
+  <Project Path="PaymentAI.Core/PaymentAI.Core.csproj" />
+  <Project Path="PaymentAI.Infrastructure/PaymentAI.Infrastructure.csproj" />
+</Solution>
